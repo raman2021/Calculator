@@ -5,16 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
+// default supper class
 public class MainActivity extends AppCompatActivity {
-
+// declaring variables
     String oldNumber="";
     String op = "+";
-
+//set boolen value true
     boolean isNewOp = true;
-
+//creating variable
     EditText ed1;
-
+// creating sub class and calling super class method
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         ed1 = findViewById(R.id.editText);
     }
-
+// checking buttons and displaying them on screen when user enter any data
     public void numberEvent(View view) {
         if (isNewOp)
             ed1.setText("");
@@ -70,10 +70,11 @@ public class MainActivity extends AppCompatActivity {
         ed1.setText (number);
 
     }
-
+// working on operator like when user want to operate any result it gives them answer
     public void operatorEvent(View view) {
         isNewOp = true;
         oldNumber = ed1.getText().toString();
+        //using switch case statement
         switch (view.getId()) {
             case R.id.divide: op = "/"; break;
             case R.id.multi: op = "*"; break;
@@ -81,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sub: op = "-"; break;
         }
     }
-
+//creating method for equal button
     public void equalEvent(View view) {
         String newNumber = ed1.getText().toString();
-
+// printing results
         double result = 0;
         switch (op) {
             case "+":
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         }
         ed1.setText(result+"");
     }
-
+// method for clear button
     public void cEvent(View view) {
         ed1.setText("0");
         isNewOp = true;

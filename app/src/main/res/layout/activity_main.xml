@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-
+// making design and layout of calculator
+//creating table and designing it
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
@@ -24,11 +24,12 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+//table row for and adding button
         <TableRow
             android:layout_marginBottom="1pt"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            //adding 4 buttons for calculator
             <Button
                 android:id="@+id/buC"
                 android:text="C"
@@ -82,7 +83,7 @@
 
 
 
-
+// second row
 
         </TableRow>
         <TableRow
@@ -143,7 +144,7 @@
 
 
 
-
+// third row
         </TableRow>
         <TableRow
             android:layout_marginBottom="1pt"
@@ -202,7 +203,7 @@
 
 
 
-
+// fourth row
         </TableRow>
         <TableRow
             android:layout_marginBottom="1pt"
@@ -262,7 +263,7 @@
 
 
 
-
+// fifth row
 
         </TableRow>
 
